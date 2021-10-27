@@ -1,0 +1,16 @@
+<div class="container">
+    <header [Client]="Client" [TotalBalanceDue]="TotalBalanceDue"></header>
+
+    <body [Items]="Items"></body>
+    <footer [Items]="Items" [OtherChanges]="OtherChanges" (Total)="setTotal($event)" (AmountPaid)="setAmountPaid($event)"></footer>
+
+    <div class="zone-invoice__footer col">
+        <div class="row">
+            <p class="note">Note:</p>
+        </div>
+
+        <div class="row">
+            <p class="show-note">{{ Items.note }}</p>
+        </div>
+    </div>
+</div>
